@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--Para que se pueda ver en cualquier dispositivo-->
+    <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+    <title>Informe Películas - iMDMA</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+    <div class="container">
+        <h1 class="display-4" style="color: #007bff; margin-bottom: 1%; margin-top: 3%; padding-top: 1%;background-color: rgba(255, 255, 255, 0.144);font-size: 44px">
+            Desarrollo de Aplicaciones Web Bloque 2 - Grupo 1
+        </h1>
+
+        <div class="container">
+            <h2 class="display-5" style="color: black; margin-left: 1%; margin-top: 3%; padding-top: 1%;background-color: rgba(255, 255, 255, 0.144);font-size: 26px">
+                Introducción
+            </h2>
+            <div style=" background-color: #d9dddf;border-radius: 21px 21px 21px 21px;
+        box-shadow: 10px 13px 15px -9px rgba(0,0,0,0.94);
+         padding: 2% 2% 2% 2%;color: black;">
+
+                <p>
+                  Los profesores tienen una cuenta creada como usuarios registrados:
+                </p>
+                <p style="font-weight: bold;">
+                  Ana Belén:
+                </p>
+                <p>
+                  email: abgr@usal.es
+              </p>
+              <p style="margin:-1% 0 1% 0;">
+                  contraseña: profesor
+                </p>
+                <p style="font-weight: bold;">
+                 Tomás:
+                </p>
+                <p>
+                  email: tomas.rb@usal.es
+              </p>
+                  <p style="margin:-1% 0 1% 0;">
+                    contraseña: profesor
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="display-5" style="color: black; margin-left: 1%; margin-top: 3%; padding-top: 1%;background-color: rgba(255, 255, 255, 0.144);font-size: 26px">
+                Instalación previa
+            </h2>
+            <div style=" background-color: #d9dddf;border-radius: 21px 21px 21px 21px;
+        box-shadow: 10px 13px 15px -9px rgba(0,0,0,0.94);
+         padding: 2% 2% 2% 2%;color: black;">
+
+                <p>
+                  Para iniciar nuestra aplicación, se necesita iniciar en "XAMPP" los puertos de Apache y MySQL e insertar esta carpeta completa en xampp/htdocs.
+                </p>
+                <img
+                src="img/informe/xampp.jpg"
+                alt="xampp"
+                title="xampp"
+                style="height:250px"
+                />
+                <br/>
+                <p>
+                  Luego insertamos la base de datos en phpMyAdmin, para ello abriremos el puerto 3306 (puerto por defecto de MySQL si no se ha modificado). Una vez dentro, crearemos una tabla nueva e insertaremos en ella el archivo "trabajo.sql".
+                </p>
+                <img
+                src="img/informe/phpmyadmin.jpg"
+                alt="phpmyadmin"
+                title="phpmyadmin"
+                style="height:400px"
+                />
+                <br/>
+                <br/>
+                <img
+                src="img/informe/importar.jpg"
+                alt="importar"
+                title="importar"
+                style="height:400px"
+                />
+                <p>
+                    Con la base de datos añadida, accedemos a la pagina de inicio de la aplicacion escribiendo en el navegador que vayamos a utilizar: http://localhost/bloque2grupo1/index.php
+                </p>
+                <img
+                src="img/informe/navegador.jpg"
+                alt="navegador"
+                title="navegador"
+                style="height:400px"
+                />
+                <br/>
+               
+            </div>
+        </div>
+
+
+        <div class="container">
+            <h2 class="display-5" style="color: black; margin-left: 1%; margin-top: 3%; padding-top: 1%;background-color: rgba(255, 255, 255, 0.144);font-size: 26px">
+                Objetivos
+            </h2>
+            <div style=" background-color: #d9dddf;border-radius: 21px 21px 21px 21px;
+        box-shadow: 10px 13px 15px -9px rgba(0,0,0,0.94);
+         padding: 2% 2% 2% 2%;color: black;">
+                <p>
+                  La aplicación tratará sobre la gestión de una página cartelera, desde el
+                  punto de vista de los clientes y desde el punto de vista de los
+                  administradores.
+                </p>
+                <p>
+                  Los usuarios tendrán disponible para ver la información de las películas
+                  en cartelera (Trailer, pequeña descripción y criticas de otros usuarios),
+                  si están registrados, podrán comentar, votar y añadir a favoritos dicha película
+                  además de modificar su perfil dentro de la aplicación.
+                </p>
+                <p>
+                  Los administradores tienen las misma funciones que los usuarios pero
+                  añadiendo un apartado en el cual pueden eliminar usuarios, modificar los
+                  permisos de los usuarios además de añadir o eliminar una película.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="display-5" style="color: black; margin-left: 1%; margin-top: 3%; padding-top: 1%;background-color: rgba(255, 255, 255, 0.144);font-size: 26px">
+                Funciones implementadas
+            </h2>
+            <div style=" background-color: #d9dddf;border-radius: 21px 21px 21px 21px;
+        box-shadow: 10px 13px 15px -9px rgba(0,0,0,0.94);
+        border: 0px solid #000000; padding: 2% 2% 2% 2%;color: black;">
+            <ul>
+               <li>
+                    <h3 style="font-size: 18px">Usuarios sin registrar:</h3>
+                    <ul class="lista-guion">
+                      <li>Visitar la cartelera.</li>
+                      <li>Busqueda simple y avanzada dentro de la aplicación.</li>
+                      <li>Ver la valoración media de las películas, sus críticas y su trailer.</li>
+                    </ul>
+                  </li>
+                    <br/>
+                    <li>
+                    <h3 style="font-size: 18px">Usuarios registrados:</h3>
+                    <ul class="lista-guion">
+                      <li>Visitar la cartelera.</li>
+                      <li>Busqueda simple y avanzada dentro de la aplicación.</li>
+                      <li>Poder marcar una película como favorita.</li>
+                      <li>Poder votar una película en un sistema basado en estrellas.</li>
+                      <li>Escribir una crítica sobre la película.</li>
+                      <li>Crear un perfil con foto dentro de la aplicación.</li>
+                       <li>Ver tus críticas y películas favoritas.</li>
+                    </ul>
+                  </li>
+                    <br/>
+                  <li>
+                    <h3 style="font-size: 18px">Administradores:</h3>
+                    <ul class="lista-punto">
+                      <li>Añadir y eliminar permisos a los usuarios</li>
+                      <li>Eliminar usuarios</li>
+                      <li>Eliminar películas</li>
+                      <li>Añadir películas</li>
+                      <li>
+                            El resto de funciones de los usuarios registrados
+                      </li>
+                    </ul>
+                  </li>
+              </ul>
+            </div>
+        </div>
+
+         <div class="container">
+            <h2 class="display-5" style="color: black; margin-left: 1%; margin-top: 3%; padding-top: 1%;background-color: rgba(255, 255, 255, 0.144);font-size: 26px">
+                Datos mínimos guardados en la BD
+            </h2>
+            <div style=" background-color: #d9dddf;border-radius: 21px 21px 21px 21px;
+        box-shadow: 10px 13px 15px -9px rgba(0,0,0,0.94);
+        border: 0px solid #000000; padding: 2% 2% 2% 2%;color: black;">
+            <ul>
+               <li>
+                    <h3 style="font-size: 18px">De un usuario:</h3>
+                    <ul class="lista-guion">
+                      <li>
+                        <campo>user</campo>: El nombre del usuario dentro de la aplicación.
+                      </li>
+                      <li>
+                        <campo>nombre</campo>: El nombre del usuario.
+                      </li>
+                      <li>
+                        <campo>apellido</campo>: El apellido del usuario.
+                      </li>
+                      <li><campo>email</campo>: Un correo electónico válido.</li>
+                      <li>
+                        <campo>Contraseña</campo>: Una contraseña para acceder al perfil.
+                      </li>
+                      <li>
+                        <campo>Fnac</campo>: Fecha de nacimiento del usuario.
+                      </li>
+                      <li>
+                        <campo>admin</campo>: Valor booleano para saber si un usuario es administrador o no.
+                      </li>
+                    </ul>
+
+                    <br/>
+                    <li>
+                    <h3 style="font-size: 18px">De una película:</h3>
+                    <ul class="lista-guion">
+                      <li>
+                        <campo>title</campo>: Titulo original de la película.
+                      </li>
+                      <li>
+                        <campo>dropyear</campo>: Año de estreno de la película.
+                      </li>
+                      <li><campo>length</campo>: Duración de la película en minutos.</li>
+                      <li>
+                        <campo>pais</campo>: País de origen de la película.
+                      </li>
+                      <li>
+                        <campo>musica</campo>: Compositor de la banda sonora de la película.
+                      </li>
+                      <li>
+                        <campo>YT</campo>: Enlace al trailer en "www.youtube.com".
+                      </li>
+                      <li>
+                        <campo>productora</campo>: Nombre de la productora de la película.
+                      </li>
+                      <li>
+                        <campo>gener</campo>: Género de la película.
+                      </li>
+                      <li>
+                        <campo>sinopsis</campo>: Resumen de la película.
+                      </li>
+                      <li>
+                        <campo>src</campo>: Direccion de la imagen con el cartel de la película.
+                      </li>
+                    </ul>
+                  </li>
+                    <br/>
+                  <li>
+                    <h3 style="font-size: 18px">De actores y directores:</h3>
+                    <ul class="lista-punto">
+                       <li>
+                            <campo>Nombre</campo>: Nombre del actor/director.
+                          </li>
+                          <li>
+                            <campo>Fnac</campo>: Fecha de nacimiento del actor/director.
+                          </li>
+                          <li><campo>nacionalidad</campo>: Nacionalidad del actor/director.</li>
+                          <li>
+                            <campo>apellido</campo>: Apellido del actor/director.
+                          </li>
+                          <li>
+                            <campo>apodo</campo>: Nombre por el que se conoce al actor/director.
+                        </li>
+          
+                    </ul>
+                  </li>
+                </li>
+              </ul>
+            </div>
+        </div>
+       </div>
+
+    <footer style="margin: 3% 0 0 0">
+
+        <p class="footerprim">
+            Copyright © iMDMA 2019 | iMDMA es una página de recomendación de cine y
+            series basada en la afinidad entre sus usuarios.<br />
+            iMDMA es un medio independiente, y su principal prioridad es la
+            privacidad, mantenimiento y seguridad de los datos de sus
+            usuarios,información que no comparte fuera de la web con ninguna entidad
+            y/o empresa, bajo ninguna circunstancia.<br />
+            All Rights Reserved - Todos los derechos reservados
+        </p>
+        <p class="footer">
+            Desarrollado por: Sergio Vicente San Gregorio, David Barrios Portales,
+            Piero Mendoza Chang
+        </p>
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
