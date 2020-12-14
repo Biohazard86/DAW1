@@ -1,11 +1,12 @@
 # DAW1-
 
 =======================================================
-UNZIP JAR.RAR 
 
-READ instalar_aplicacion.html
+1 - UNZIP JAR.RAR 
 
-DONE.
+2 - READ instalar_aplicacion.html
+
+3 - DONE.
 
 =======================================================
 
